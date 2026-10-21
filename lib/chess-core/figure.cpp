@@ -11,6 +11,8 @@ bool moveFigure(const ChessFigure& figure, const int start, const int end) {
       return moveLeaper(figure, start, end);
     case Pawn:
       return movePawn(figure, start, end);
+    default:
+      return false;
   }
 }
 bool moveSlider(const ChessFigure& figure, const int start, const int end);
