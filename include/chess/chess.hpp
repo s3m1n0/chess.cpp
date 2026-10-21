@@ -1,5 +1,4 @@
-#pragma once
+#ifndef CHESS_H
+#define CHESS_H
 
-#include <string>
-
-std::string getHello(std::string_view name);
+#endif
