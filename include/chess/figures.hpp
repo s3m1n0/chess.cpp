@@ -15,6 +15,8 @@ struct coordinate {
   int y;
 };
 
+bool isSlidingPiece(const ChessFigure& figure);
+bool isPromotion(const ChessFigure& figure, const coordinate& end);
 bool validateMove(const ChessFigure& figure, const coordinate& start,
                   const coordinate& end);
 #endif
