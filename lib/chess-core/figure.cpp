@@ -11,6 +11,5 @@ bool isSlidingPiece(const ChessFigure& figure) {
       return false;
   }
 }
-bool isPromotion(const ChessFigure& figure, const coordinate& end) {}
-bool validateMove(const ChessFigure& figure, const coordinate& start,
-                  const coordinate& end) {}
+bool isPromotion(const ChessFigure& figure, const int end) {}
+bool validateMove(const ChessFigure& figure, const int start, const int end) {}
