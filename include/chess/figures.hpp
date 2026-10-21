@@ -10,7 +10,9 @@ struct ChessFigure {
   PlayerColours colour;
 };
 
-bool isSlidingPiece(const ChessFigure& figure);
-bool isPromotion(const ChessFigure& figure, const int end);
-bool validateMove(const ChessFigure& figure, const int start, const int end);
+bool moveFigure(const ChessFigure& figure, const int start, const int end);
+bool moveSlider(const ChessFigure& figure, const int start, const int end);
+bool moveLeaper(const ChessFigure& figure, const int start, const int end);
+bool movePawn(const ChessFigure& figure, const int start, const int end);
+
 #endif

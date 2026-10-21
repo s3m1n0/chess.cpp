@@ -1,15 +1,18 @@
 #include <chess/figures.hpp>
 
-bool isSlidingPiece(const ChessFigure& figure) {
+bool moveFigure(const ChessFigure& figure, const int start, const int end) {
   using enum ChessFigureTypes;
   switch (figure.type) {
     case Rook:
-      return true;
     case Bishop:
-      return true;
-    default:
-      return false;
+      return moveSlider(figure, start, end);
+    case King:
+    case Knight:
+      return moveLeaper(figure, start, end);
+    case Pawn:
+      return movePawn(figure, start, end);
   }
 }
-bool isPromotion(const ChessFigure& figure, const int end) {}
-bool validateMove(const ChessFigure& figure, const int start, const int end) {}
+bool moveSlider(const ChessFigure& figure, const int start, const int end);
+bool moveLeaper(const ChessFigure& figure, const int start, const int end);
+bool movePawn(const ChessFigure& figure, const int start, const int end);
