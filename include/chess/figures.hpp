@@ -1,5 +1,5 @@
-#ifndef CHESS_H
-#define CHESS_H
+#ifndef FIGURES_H
+#define FIGURES_H
 
 enum class ChessFigureTypes { Pawn, Knight, Bishop, Rook, Queen, King };
 
@@ -15,4 +15,6 @@ struct coordinate {
   int y;
 };
 
+bool validateMove(const ChessFigure& figure, const coordinate& start,
+                  const coordinate& end);
 #endif
